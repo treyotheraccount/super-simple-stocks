@@ -8,7 +8,7 @@ Exchange::Exchange(std::string n)
     name = n;
 }
 
-void Exchange::add_stock(std::string sym, int ld, int par, Stock::StockType st, int fd)
+void Exchange::add_stock(std::string sym, int ld, int par, Stock::StockType st, double fd)
 {
     Stock t(sym, ld, par, st, fd);
     stocks.push_back(t);
@@ -30,7 +30,7 @@ double Exchange::calculate_geometric_mean()
 void Exchange::print()
 {
     std::cout << std::setw(8) << std::left << "Symbol" << std::setw(12) << std::left << "Type" << std::setw(15) << std::left << "Last Dividend" << std::setw(16) << std::left << "Fixed Dividend" << std::setw(11) << std::left << "Par Value" << std::setw(12) << std::left << "Price" << std::endl;
-    
+
     for (Stock &stock : this->get_stocks())
     {
         stock.print();

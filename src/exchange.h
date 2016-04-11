@@ -9,7 +9,7 @@ class Exchange
 {
     public:
         Exchange(std::string);
-        void add_stock(std::string, int, int, Stock::StockType, int);
+        void add_stock(std::string, int, int, Stock::StockType, double);
         void print();
         void find_and_print(std::string);
         std::vector<Stock>& get_stocks();
