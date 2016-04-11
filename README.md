@@ -1,2 +1,4 @@
 To Run:
->>> make && bin/super-simple-stocks
+```
+ make && bin/super-simple-stocks
+```
